@@ -1,6 +1,9 @@
 # クラッシュコースNostr
 ## 2023/02/07
 
+## TL;DR: 
+iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethyst](https://play.google.com/store/apps/details?id=com.vitorpamplona.amethyst), PC: [iris.to](https://iris.to)を開け。あとはフィーリングでなんとかなる。
+
 ## Nostrってなに
 　新しいTwitterクローン(2).web3。仮想通貨機能(Lightning Networkによる簡易送金)が初めから統合されている。ブロックチェーンではない。P2Pではない。リレー間のメッシュ機能はまだない。アーキテクチャはWinny掲示板に似ているらしい。IDは独自形式の公開鍵ペアで、投稿は秘密鍵で署名され、 **リレーサーバ**に送信される。ユーザは推しがいる**リレーサーバ**に接続してフォローしておくと、投稿が降ってくる。手動更新ではなくストリーミングAPI的な挙動になる。
  
