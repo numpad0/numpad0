@@ -42,7 +42,7 @@ iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethy
 - 一旦投稿すると削除はできない。あんふぁぼもできない(なぜ?)。実名や住所などを投稿しないように注意されたい。
 
 ## 認証バッジ/NIP-05
-　クライアント側からプロフィール画面で指定されているサーバに`/.well-known/nostr.json?id=<id>`という形式でクエリを打って、打ったIDと公開鍵が返ってくればクライアント側でバッジが付く。`github.com/username.keys`に近い。[GitHub Pages](https://www.google.com/search?q=github+pages+%E4%BD%BF%E3%81%84%E6%96%B9)でやりたければWebからリポジトリを作ってWeb編集機能で以下をコピペして`example`と`npub123...`を自分のものに置換すると早い:
+　クライアント側からプロフィール画面で指定されているサーバに`/.well-known/nostr.json?id=<id>`という形式でクエリを打って、打ったIDと公開鍵が返ってくればクライアント側でバッジが付く。`github.com/username.keys`に近い。[GitHub Pages](https://www.google.com/search?q=github+pages+%E4%BD%BF%E3%81%84%E6%96%B9)でやりたければWebからリポジトリを作ってWeb編集機能で以下をコピペして[キー変換サイトで公開鍵をhex形式に変換して](https://damus.io/key/)`example`と`hex123...`を自分のものに置換すると早い:
 
 `_config.yml `:
 ```
@@ -53,7 +53,7 @@ include: ".well-known"
 ```
 {
   "names": {
-    "example": "npub12345678901234567890123456789012345678901234567890"
+    "example": "hex12345678901234567890123456789012345678901234567890"
   }
 }
 ```
