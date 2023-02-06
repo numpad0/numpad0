@@ -63,6 +63,6 @@ include: ".well-known"
   }
 }
 ```
-　webrootに`_config.yml`の代わりに`.nojekyll`という空ファイルを作る方法も広まっているが、Markdownの変換も止まるのでだるい。ちなみにGitHub Pagesは自前ドメインが使えるので筆者はまさにそうしてusername@username.exampleで認証を通している(ﾄﾞﾔ。他に有志によって上のnostr.jsonを返すサービスが立てられているが、筆者は転生した時にバッジを消すのがメンドそうなのでおすすめしない。
+　webrootに`_config.yml`の代わりに`.nojekyll`という空ファイルを作る方法も広まっているが、Markdownの変換も止まるのでだるい。ちなみにGitHub Pagesは自前ドメインが使えるので筆者はまさにそうしてusername@username.exampleで認証を通している(ﾄﾞﾔ。他に有志によって上のnostr.jsonを返すサービスが立てられているが、転生した時にバッジを消すのがメンドそうなので筆者はおすすめしない。
 
 \- 以上 \- 
