@@ -14,7 +14,7 @@ iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethy
 ## はじめかた
 　クライアントアプリ(iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethyst](https://play.google.com/store/apps/details?id=com.vitorpamplona.amethyst), PC: [iris.to](https://iris.to))を開いて希望の@ユーザ名を打ち込むと秒でIDができる。よく使われるリレーのURLは最初からアプリに登録されている。ID取得はローカルの生成動作なので何の待ちもチェックもない。この時**公開鍵**と**秘密鍵**が生成され、これが**ID**と**パスワード**に相当する。公開鍵は`npub`、秘密鍵は`nsec`で始まる。逆に文字形式のパスワードはない。秘密鍵は絶対になくしてはいけない。Twitter互換の@ユーザ名とディスプレイネームは存在するが@ユーザ名の一意性は強制されないので好きに被らせられる。
 
-## 公開鍵暗号
+## 公開鍵、秘密鍵、公開鍵暗号とは
 　平文に対して公開鍵と秘密鍵の両方で1回ずつ暗号化すると平文に戻る暗号化方式。どちらを先に行ってもよく、平文を秘密鍵で暗号化すれば公開鍵で復号できるし、公開鍵で暗号化すると秘密鍵で復号できる。片方だけ行ったものを暗号文として扱う。ただし、同じ鍵で復号することはできない。もう片割れで処理する以外に解読方法はない。
 
 ## 秘密鍵の取り扱い
@@ -42,7 +42,7 @@ iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethy
 - 一旦投稿すると削除はできない。あんふぁぼもできない(なぜ?)。実名や住所などを投稿しないように注意されたい。
 
 ## 認証バッジ/NIP-05
-　クライアント側からプロフィール画面で指定されているサーバに`/.well-known/nostr.json?id=<id>`という形式でクエリを打って、打ったIDと公開鍵が返ってくればクライアント側でバッジが付く。`github.com/username.key`に近い。[GitHub Pages](https://www.google.com/search?q=github+pages+%E4%BD%BF%E3%81%84%E6%96%B9)でやりたければWebからリポジトリを作ってWeb編集機能で以下をコピペして`USERNAME`と`npub123...`を自分のものに置換すると早い:
+　クライアント側からプロフィール画面で指定されているサーバに`/.well-known/nostr.json?id=<id>`という形式でクエリを打って、打ったIDと公開鍵が返ってくればクライアント側でバッジが付く。`github.com/username.key`に近い。[GitHub Pages](https://www.google.com/search?q=github+pages+%E4%BD%BF%E3%81%84%E6%96%B9)でやりたければWebからリポジトリを作ってWeb編集機能で以下をコピペして`example`と`npub123...`を自分のものに置換すると早い:
 
 `_config.yml `:
 ```
@@ -53,7 +53,7 @@ include: ".well-known"
 ```
 {
   "names": {
-    "USERNAME": "npub12345678901234567890123456789012345678901234567890"
+    "example": "npub12345678901234567890123456789012345678901234567890"
   }
 }
 ```
