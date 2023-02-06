@@ -5,7 +5,7 @@
 iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethyst](https://play.google.com/store/apps/details?id=com.vitorpamplona.amethyst), PC: [iris.to](https://iris.to)を開け。あとはフィーリングでなんとかなる。
 
 ## Nostrってなに
-　新しいTwitterクローン(2).web3。仮想通貨機能(Lightning Networkによる簡易送金)が初めから統合されている。ブロックチェーンではない。P2Pではない。リレー間のメッシュ機能はまだない。アーキテクチャはWinny掲示板に似ているらしい。IDは独自形式の公開鍵ペアで、投稿は秘密鍵で署名され、 **リレーサーバ**に送信される。ユーザは推しがいる**リレーサーバ**に接続してフォローしておくと、投稿が降ってくる。手動更新ではなくストリーミングAPI的な挙動になる。
+　新しいTwitterクローン(2).web3。仮想通貨機能(Lightning Networkによる簡易送金)が初めから統合されている。ブロックチェーンではない。P2Pではない。リレー間のメッシュ機能はまだない。アーキテクチャはWinny掲示板に似ているらしい。IDは独自形式の公開鍵ペアで、投稿は秘密鍵で署名され、 **リレーサーバ**に送信される。ユーザは推しがいる**リレーサーバ**に接続してフォローしておくとその投稿が降ってくる。手動更新ではなくストリーミングAPI的な挙動になる。
  
  <div align="center">
     <img src="crash_course_nostr_1.png">
@@ -42,7 +42,7 @@ iOS: [Damus](https://apps.apple.com/jp/app/damus/id1628663131), Android: [Amethy
 - 一旦投稿すると削除はできない。あんふぁぼもできない(なぜ?)。実名や住所などを投稿しないように注意されたい。
 
 ## 認証バッジ/NIP-05
-　クライアント側からプロフィール画面で指定されているサーバに`/.well-known/nostr.json?id=<id>`という形式でクエリを打って、打ったIDと公開鍵が返ってくればクライアント側でバッジが付く。`github.com/username.key`に近い。[GitHub Pages](https://www.google.com/search?q=github+pages+%E4%BD%BF%E3%81%84%E6%96%B9)でやりたければWebからリポジトリを作ってWeb編集機能で以下をコピペして`example`と`npub123...`を自分のものに置換すると早い:
+　クライアント側からプロフィール画面で指定されているサーバに`/.well-known/nostr.json?id=<id>`という形式でクエリを打って、打ったIDと公開鍵が返ってくればクライアント側でバッジが付く。`github.com/username.keys`に近い。[GitHub Pages](https://www.google.com/search?q=github+pages+%E4%BD%BF%E3%81%84%E6%96%B9)でやりたければWebからリポジトリを作ってWeb編集機能で以下をコピペして`example`と`npub123...`を自分のものに置換すると早い:
 
 `_config.yml `:
 ```
