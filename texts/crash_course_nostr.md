@@ -59,4 +59,16 @@ include: ".well-known"
 ```
 　webrootに`_config.yml`の代わりに`.nojekyll`という空ファイルを作る方法も広まっているが、Markdownの変換も止まるのでだるい。ちなみにGitHub Pagesは自前ドメインが使えるので筆者はまさにそうしてusername@username.exampleで認証を通している(ﾄﾞﾔ。他に有志によって上のnostr.jsonを返すサービスが立てられているが、転生した時にバッジを消すのがメンドそうなので筆者はおすすめしない。
 
+## 仮想通貨 / Crypto / Bitcoin Lightning  
+
+　Wallet of Satoshi[iOS](https://apps.apple.com/jp/app/wallet-of-satoshi/id1438599608) / [Android](https://play.google.com/store/apps/details?id=com.livingroomofsatoshi.wallet) を落とし、Lightning Invoice(請求書)を生成、コピーして投稿に貼ると支払いを受け付けられる。請求書には有効期限があり失効する。Lightning Address(LNURL...)をプロフィールのBitcoin Lightning Tipsの欄に設定すると常設の受取先にできる。Lightning Network/Bitcoin Lightningは無印Bitcoinを拡張し、割り当てた残高をオフチェーンで融通することでマイナー待ちなく高速に支払いを行うシステム。Lightningアドレスの残高は無印Bitcoin(Bitcoin mainnet)と行き来できる。詳しくは知らん。
+
+ 　注意点として、利便性観点からWallet of Satoshiはウォレットを運営が保持している形式(non-custodial というらしい)なのでセキュリティは運営に依存する。飛んで困る額を入れてはだめ。
+
+## 参考文献
+
+- [ブログで使っている自分のドメイン（とサーバ）で NIP-05 認証する](https://chalow.net/2023-02-04-1.html)
+- [https://scrapbox.io/nostr/](https://scrapbox.io/nostr/)
+- [Namekuji @nmkj 6h](https://iris.to/#/post/note1z0dcjrh8pjdgza93zjwattkg7rase0k4xhaqssa7chdaqra9wqmqwepjw0)
+
 \- 以上 \- 
