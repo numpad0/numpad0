@@ -6,6 +6,7 @@ FacebookとかInstagramとかTikTokとかはやってないです マジでや�
 
 Redditはやってたけどポイントを稼ぐ方法は分かったし気が狂うのでやめた 
 
+[ﾌﾞﾙｽｺ招待リンク](<mailto:bsky-social-hhwok-sihth>)
 
 ### なにここ
 
