@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Path</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .choice {
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(50, 50, 50, 0.3);
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.2rem;
+        }
+
+        .choice:hover {
+            background: rgba(70, 70, 70, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .choice::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        .choice:hover::before {
+            top: 100%;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        .container {
+            animation: flicker 3s infinite;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 1);
+            font-size: 24px;
+            text-align: center;
+            padding: 0 20px;
+            animation: flicker 4s infinite;
+        }        
+        .usage {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 14px;
+            text-align: left;
+            padding: 0 20px;
+            animation: flicker 4s infinite;
+        }
+
+        @media (max-width: 480px) {
+            .wrapper {
+                gap: 20px;
+            }
+            
+            .subtitle {
+                font-size: 0.8rem;
+                padding: 0 40px;
+                line-height: 1.4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="subtitle">
+            <div>Mobile is portrait optimized, Desktop is suitable for landscape use</div>
+            <br>
+            <div>Contents are supposed to be the same, if not, fork it for fixes, I can't</div>
+        </div>
+        <div class="container">
+            <a href="desktop_en.html" class="choice">Desktop (EN)</a>
+            <a href="desktop_jp.html" class="choice">Desktop (JP)</a>
+            <a href="mobile_en.html" class="choice">Mobile (EN)</a>
+            <a href="mobile_jp.html" class="choice">Mobile (JP)</a>
+        </div>
+        <div class="usage">
+            <div>Intended for livestream watchers to keep track of stream, not for players</div>
+            <div>because why ruin your own fun</div>
+            <br>
+            <div>
+                usage: <br>
+                - 大体見たら分かれ<br>
+                - configure on keypad like "2 L 3 B", after that hit LIVE or BLANK<br>
+                - hit zeroize and go at keypad again on each loads or to redo<br>
+                - first of rows keep track of loads, second keep rounds spent<br>
+                - for burner phone gadget, hit phone then use keypad<br>
+                - for inverter, hit inverter then hit the button that matches what happened<br>
+                <br>
+            </div> 
+            <div>
+                no cookies, no tracking, not even separate CSS and js files, it's all in the file<br>
+                basically written entirely by Continue and Claude 3.5 Sonnet including this page<br>
+                so I guess no license too, hopefully I'm not contributing to the apocalypse<br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

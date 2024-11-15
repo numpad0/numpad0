@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .big-button {
+            width: 200px;
+            height: 250px;
+            font-size: 48px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            color: white !important;
+        }
+
+        #red-button { background-color: rgb(120, 0, 0); }
+        #blue-button { background-color: rgb(0, 0, 100); }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 15px;
+            border: 5px solid #a1a1a1;
+            background-color: rgb(50, 48, 43);
+            border-radius: 10px;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .keypad-button-num {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .keypad-button-red {
+            background-color: rgb(120, 0, 0) !important;
+            color: white !important;
+            font-size: 20px;
+        }
+
+        .keypad-button-blue {
+            background-color: rgb(0, 0, 100) !important;
+            color: white !important;
+            font-size: 20px;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 50px;
+        }
+
+        .control-button {
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+            height: 100px;
+            min-width: 160px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .indicator-row {
+            display: flex;
+            gap: 5px;
+            margin: 10px 0;
+        }
+
+        .indicator-square {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #a1a1a1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(40, 37, 32);
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .highlighted {
+            background-color: #fff176;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .control-button.inverter-active {
+            background-color: rgb(190, 0, 0);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .control-button.phone-active {
+            background-color: rgb(0, 160, 0);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .big-button, .keypad-button-num, .keypad-button-red, .keypad-button-blue, .control-button {
+            background-color: rgb(236, 213, 163);
+            color: rgb(17, 14, 7);
+            border: 5px solid #a1a1a1;
+            font-weight: bolder;
+            border-radius: 10px;
+            box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .description-box {
+            padding: 10px 20px;
+            font-size: 11px;
+            height: 75px;
+            min-width: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(40, 37, 32);
+            border: 5px solid #a1a1a1;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: rgb(223, 193, 63);
+        }
+
+        .indicator-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        #clear-button {
+            width: 160px;
+            height: 100px;
+            font-size: 20px;
+            background-color: rgb(104, 95, 76);
+            color: white;
+            border: 5px solid #a1a1a1;
+            font-weight: bolder;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        #clear-button:active {
+            transform: translateY(2px);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .big-button:active, .keypad-button-num:active, .keypad-button-red:active, 
+        .keypad-button-blue:active, .control-button:active {
+            transform: translateY(2px);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-buttons">
+            <button id="red-button" class="big-button">実<br>包</button>
+            <div class="keypad">
+                <button class="keypad-button-num">7</button>
+                <button class="keypad-button-num">8</button>
+                <button class="keypad-button-num">9</button>
+                <button class="keypad-button-num">4</button>
+                <button class="keypad-button-num">5</button>
+                <button class="keypad-button-num">6</button>
+                <button class="keypad-button-num">1</button>
+                <button class="keypad-button-num">2</button>
+                <button class="keypad-button-num">3</button>
+                <button class="keypad-button-red">赤</button>
+                <button class="keypad-button-num">0</button>
+                <button class="keypad-button-blue">青</button>
+            </div>
+            <button id="blue-button" class="big-button">空<br>砲</button>
+        </div>
+
+        <div class="control-buttons">
+            <button class="control-button">反転器</button>
+            <div class="description-box">数字盤より設定せよ<br>――――――――――――<br>参加者の使用を禁ず</div>
+            <button class="control-button">電話機</button>
+        </div>
+
+        <div class="indicator-section">
+            <div class="indicator-rows">
+                <div class="indicator-row" id="total-tokens">
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                </div>
+                <div class="indicator-row" id="played-tokens">
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                    <div class="indicator-square"></div>
+                </div>
+            </div>
+            <button id="clear-button">盤　面<br>初期化</button>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let gameState = {
+            phoneMode: false,
+            inverterMode: false,
+            lastNumber: 0
+        };
+
+        // Initialize all button references
+        const redButton = document.getElementById('red-button');
+        const blueButton = document.getElementById('blue-button');
+        const inverterButton = document.querySelector('.control-button:nth-child(1)');
+        const phoneButton = document.querySelector('.control-button:nth-child(3)');
+        const clearButton = document.getElementById('clear-button');
+        const numButtons = document.querySelectorAll('.keypad-button-num');
+        const redKeyButton = document.querySelector('.keypad-button-red');
+        const blueKeyButton = document.querySelector('.keypad-button-blue');
+        const totalTokens = document.getElementById('total-tokens').children;
+        const playedTokens = document.getElementById('played-tokens').children;
+
+        // Add this at the start of your script section
+        const CONFIG = {
+            colors: {
+                red: 'rgb(120, 0, 0)',
+                blue: 'rgb(0, 0, 100)',
+                brightRed: 'rgb(230, 0, 0)',
+                brightBlue: 'rgb(30, 135, 230)',
+                white: 'white',
+                inactive: ''
+            },
+            tokens: {
+                red: '赤',
+                blue: '青',
+                phone: '預',
+                played: '済'
+            },
+            ui: {
+                inverter: {
+                    active: '反転器<br>使用中',
+                    inactive: '反転器'
+                },
+                phone: {
+                    active: '預言を<br>入　力',
+                    inactive: '電話機'
+                },
+                buttons: {
+                    clear: '盤　面<br>初期化',
+                    red: '実<br>包',
+                    blue: '空<br>砲'
+                }
+            }
+        };
+
+        // Helper functions
+        function processKeypadInput(number, color) {
+            if (gameState.phoneMode) {
+                const emptyIndex = findNthEmptyBox(parseInt(number));
+                if (emptyIndex !== -1) {
+                    const box = playedTokens[emptyIndex];
+                    box.style.backgroundColor = color === CONFIG.tokens.red ? CONFIG.colors.brightRed : CONFIG.colors.brightBlue;
+                    box.style.color = CONFIG.colors.white;
+                    
+                    // Reset phone mode after use
+                    clearPhoneButton();
+                }
+            } else {
+                const count = parseInt(number);  // Ensure number is parsed as integer
+                const isRed = color === CONFIG.tokens.red;
+                
+                // Remove bounds checking for total tokens
+                if (isRed) {
+                    // Red fills from left
+                    for (let i = 0; i < count; i++) {
+                        totalTokens[i].style.backgroundColor = CONFIG.colors.brightRed;
+                    }
+                } else {
+                    // Blue fills from right
+                    for (let i = 0; i < count; i++) {
+                        totalTokens[totalTokens.length - 1 - i].style.backgroundColor = CONFIG.colors.brightBlue;
+                    }
+                }
+            }
+        }
+
+        function findNthEmptyBox(n) {
+            let emptyCount = 0;
+            for (let i = 0; i < playedTokens.length; i++) {
+                if (!playedTokens[i].innerHTML) {
+                    emptyCount++;
+                    if (emptyCount === n) return i;
+                }
+            }
+            return -1;
+        }
+
+        function colorInitialTokens(count, color) {
+            const bgColor = color === CONFIG.tokens.red ? CONFIG.colors.brightRed : CONFIG.colors.brightBlue;
+            const startIndex = color === CONFIG.tokens.red ? 0 : totalTokens.length - count;
+            for (let i = 0; i < count; i++) {
+                totalTokens[startIndex + i].style.backgroundColor = bgColor;
+            }
+        }
+
+        function markToken(isRed) {
+            const isRedActive = gameState.inverterMode ? !isRed : isRed;
+            const color = isRedActive ? CONFIG.colors.brightRed : CONFIG.colors.brightBlue;
+            
+            // Add to first empty or phone-colored box in played tokens (bottom row)
+            for (let box of playedTokens) {
+                // Allow marking if box has no content or just has a color (phone mark)
+                if (!box.innerHTML) {
+                    box.style.backgroundColor = color;
+                    box.innerHTML = CONFIG.tokens.played;
+                    box.style.color = CONFIG.colors.white;
+                    break;
+                }
+            }
+
+            // Still try to mark a token in the top row if available
+            const tokens = Array.from(totalTokens);
+            const direction = isRedActive ? {
+                start: 0,
+                step: 1
+            } : {
+                start: tokens.length - 1,
+                step: -1
+            };
+
+            // Find and mark token with X (if available)
+            for (let i = direction.start; i >= 0 && i < tokens.length; i += direction.step) {
+                if (tokens[i].style.backgroundColor === color && !tokens[i].innerHTML) {
+                    tokens[i].innerHTML = CONFIG.tokens.played;
+                    tokens[i].style.color = CONFIG.colors.white;
+                    break;
+                }
+            }
+
+            if (gameState.inverterMode) {
+                clearInverterButton();
+            }
+        }
+
+        function clearIndicators() {
+            [...totalTokens, ...playedTokens].forEach(box => {
+                box.style.backgroundColor = '';
+                box.innerHTML = '';
+                box.classList.remove('next-position');
+            });
+        }
+
+        function clearKeypad(){
+            [...numButtons, redKeyButton, blueKeyButton].forEach(button => {
+                button.style.backgroundColor = '';
+            });
+        }
+
+        // Add these new helper functions
+        function clearInverterButton() {
+            gameState.inverterMode = false;
+            inverterButton.classList.remove('inverter-active');
+            inverterButton.innerHTML = CONFIG.ui.inverter.inactive;
+            inverterButton.style.color = CONFIG.colors.inactive;
+        }
+
+        function clearPhoneButton() {
+            gameState.phoneMode = false;
+            phoneButton.classList.remove('phone-active');
+            phoneButton.innerHTML = CONFIG.ui.phone.inactive;
+            phoneButton.style.color = CONFIG.colors.inactive;
+        }
+
+        // Add new clear functions
+        function clearAllButtons() {
+            clearInverterButton();
+            clearPhoneButton();
+            clearKeypad();
+        }
+
+        // Event Listeners
+        redButton.addEventListener('click', () => markToken(true));
+        blueButton.addEventListener('click', () => markToken(false));
+        clearButton.addEventListener('click', () => {
+            clearIndicators();
+            clearAllButtons();
+            gameState.lastNumber = 0;
+        });
+
+        inverterButton.addEventListener('click', () => {
+            if (gameState.inverterMode) {
+                clearInverterButton();
+            } else {
+                gameState.inverterMode = true;
+                inverterButton.classList.add('inverter-active');
+                inverterButton.innerHTML = CONFIG.ui.inverter.active;
+                inverterButton.style.color = CONFIG.colors.white;
+            }
+        });
+
+        phoneButton.addEventListener('click', () => {
+            if (gameState.phoneMode) {
+                clearPhoneButton();
+            } else {
+                gameState.phoneMode = true;
+                phoneButton.classList.add('phone-active');
+                phoneButton.innerHTML = CONFIG.ui.phone.active;
+                phoneButton.style.color = CONFIG.colors.white;
+            }
+        });
+
+        // Keypad input handling
+        [...numButtons, redKeyButton, blueKeyButton].forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.innerHTML;
+                if (value === CONFIG.tokens.red || value === CONFIG.tokens.blue) {
+                    clearKeypad();
+                    processKeypadInput(gameState.lastNumber, value);
+                } else {
+                    clearKeypad();
+                    gameState.lastNumber = parseInt(value);
+                    button.style.backgroundColor = 'rgb(240, 230, 255)';
+                }                
+            });
+        });
+
+        // Update the button text content
+        redButton.innerHTML = CONFIG.ui.buttons.red;
+        blueButton.innerHTML = CONFIG.ui.buttons.blue;
+        clearButton.innerHTML = CONFIG.ui.buttons.clear;
+
+    </script>
+</body>
+</html>
