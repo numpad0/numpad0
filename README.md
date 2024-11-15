@@ -16,4 +16,4 @@ Redditはやってたけどポイントを稼ぐ方法は分かったし気が�
 
 I don't have active Facebook/Instagram/TikTok/Weibo/Vk accounts. If you find @numpad0 there it's not me, especially where using baseline real identities is norm. Thanks!
 
-[That game tracker app](/thatgametrackerapp/)
+[That game tracker app](https://numpad0.com/thatgametrackerapp/)
