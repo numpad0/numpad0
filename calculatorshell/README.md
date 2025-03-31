@@ -1,4 +1,5 @@
 # 3D printable handheld computer shell 
+https://numpad0.com/calculatorshell/calculatorshell.step
 
 ## LICENSE
 CC BY-SA. Note that this is based on HP products, common sense applies. If anyone's making a commercial product based on this data, I won't be involved in that.
