@@ -1,7 +1,7 @@
 # 3D printable handheld computer shell 
 File: [https://numpad0.com/calculatorshell/calculatorshell.step](https://numpad0.com/calculatorshell/calculatorshell.step)
 
-## Abstract
+## Description
 This is printable design data for a lookalike HP "Voyager" style handheld computer. File includes cutout for PCB, provisions for metal switch domes(5mm IIRC), and spaces for a cheap non-backlit 16x2 LCD glass, coin cells, and enough space for driver board for the glass as well as a Raspberry Pi Pico. Circuit designs are not included. The file does not include logo and/or labeling designs.
 All mechanical parts are intended to be printed on a home resin type SLA 3D printer. It would not be practical to print on a FDM filament printers. 
 
