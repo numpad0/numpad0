@@ -1,6 +1,7 @@
 # numpad0
 
 Twitter: [@numpad0](https://twitter.com/numpad0)  
+bsky: [numpad0.com](https://bsky.app/profile/numpad0.com)
 
 FacebookとかInstagramとかTikTokとかはやってないです マジでやってないので同名がいたら偽者
 
