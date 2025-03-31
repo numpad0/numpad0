@@ -12,7 +12,7 @@ All mechanical parts are intended to be printed on a home resin type SLA 3D prin
 It was *meant* to be a personal handheld UART terminal with calculation features.
 
 ## LICENSE
-CC BY-SA. Note that this is based on HP a product line, so common sense applies. If anyone's making a commercial product based on this data, I won't be involved in that and I won't take any resposibilities. 
+CC BY-SA. Note that this is made to be visually identical to an HP product, so common sense applies despite including none of original logo or text. If anyone's making a commercial product based on this data, I won't be involved in that and I won't take any resposibilities. 
 
 ## COPYRIGHT  
 (C) 2025 @numpad0 
