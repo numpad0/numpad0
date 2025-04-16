@@ -1,0 +1,13 @@
+## What's "*chazuke*" food offered to guests in Kyoto?
+
+There's an old joke in Japan that people in Kyoto offers *chazuke*, or tea poured over steamed rice, for dinner or a light supper, either to discreetly communicate a guest that he shall leave, or as a customary offer to be declined. The food itself is nothing fancy nor particulary miserable so long it is eaten on the kitchen table for breakfast - basically just an alternate form of oatmeal. If host offers the new brand of cereal they have been trying this week, as you leave, it should not be hard to decline. 
+
+This is actually not a new joke; in fact, it [dates back to at least 1775](https://ja.wikipedia.org/wiki/%E4%BA%AC%E3%81%AE%E8%8C%B6%E6%BC%AC%E3%81%91) in a book of collection of West Japanese *rakugo* comedy stories. The story, still played by *rakugo* comedians, roughly goes as below. 
+
+> A quirky Osaka businessman wonders what kind of exquisite *chazuke* is served in the great old city of Kyoto if one was to actually take that Kyoto style offer. He decide to visit a mansion of an absent business partner with sole intent to try that thing for once. Knowing uneventful state of businesses between her husband and the guest, she concludes that he must be here for *the thing*. She restrains herself to refrain from saying the damn line, but as she is forced to go back and forth with the adamant guest, the line slips out her lips and she is forced to prepare an actual bowl of *chazuke* with pickles as a side with last bits of cooked rice left in the kitchen, which the man enjoys. The story ends with the wife spitting back at him with the empty barrel she scraped the rice from. 
+
+Today, the standard *Nagatanien* brand *chazuke* mix is available everywhere: it comes in a tape of breakaway aluminized paper packets, to be torn and poured on a bowl of rice before adding hot water. It contains a lot more more salt and dashi tastes than bitterness of actual tea. [The legendary 1998 *Nagatanien* advert captures it perfectly](https://www.youtube.com/watch?v=OpsrUhV2RP0). Or if anyone's trying this with *onigiri* riceball instead of last bit of plain rice left in the cooker, maybe just the hot water might do - without such packet or any additional flavoring. 
+
+--- 
+##### footnotes
+- Leaving cooked rice in the cooker or in a shallow wooden tub is an old practice. It should be wrapped or moved to small tupperwares to serving sizes, frozen in the freezer, and microwaved before serving. It's completely acceptable from food safety standpoint to refregirate rice instead of freezing, but refregerated rice is harder to reconsitute than frozen rice.
