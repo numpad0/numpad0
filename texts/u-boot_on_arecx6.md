@@ -24,7 +24,7 @@
 ## false leads
 　色々先人がいて JTAG アダプタつないで OpenOCD で焼いたらよいとされているがよい JTAG アダプタがない。Bluepill の CMSIS-DAP ファームだの FT232RL だのやってみたがどっちも壊しただけに終わった。
 
-　以下はさして役に立たないリンクである(内容に問題があるわけではない)。
+　以下は後述の方法がより簡単であるためにさして役に立たないリンクである(内容に問題があるわけではない)。
 
   - https://github.com/RadioOperator/STM32F103C8T6_CMSIS-DAP_SWO/blob/master/build/F103-DAP-SWO-CDC-BLUEPILL-SWD_PB8PB9.hex
   - https://github.com/dirtyjtag/DirtyJTAG/blob/master/docs/install-bluepill.md
@@ -50,7 +50,7 @@
   9.  => `saveenv`
   10. => `reset`
 
-　なお、上手順 5. を実行するまでは恒久的な変更はない、はず、である。Ethernet MAC アドレスは新しい u-boot の書き込みに伴って消えるため再設定が必要である。本体底面を参照、または事前に記録しておくとよい。なお、 MAC アドレスは L2 より外に出ないので適当でも構わない。せいぜい宅内で被りがなく頭の 1 バイトの下から 2 ビットを 0b10 とする locally administred unicast address としてあれば十二分である。
+　なお、上手順 5. を実行するまでは恒久的な変更はない、はず、である。Ethernet MAC アドレスは新しい u-boot の書き込みに伴って消えるため再設定が必要である。本体底面を参照、または事前に記録しておくとよい。わすれた場合は、 MAC アドレスは L2 より外に出ないので適当に設定しても構わない。せいぜい宅内で被りがなく頭の 1 バイトの下から 2 ビットを 0b10 とする locally administred unicast address としてあれば十二分である。
 
 　以下は役に立ったリンクである。
   - https://openwrt.org/toh/seagate/goflexnet
