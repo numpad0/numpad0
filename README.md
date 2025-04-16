@@ -18,6 +18,7 @@ Redditはやってたけどポイントを稼ぐ方法は分かったし気が�
 I don't have active Facebook/Instagram/TikTok/Weibo/Vk accounts. If you find @numpad0 there it's not me, especially where using baseline real identities is norm. Thanks!
 
 ### misc.  
-- [That game tracker app](/thatgametrackerapp/)  
+- [That game tracker app](/thatgametrackerapp/)
+- [Flashing U-boot on ArecX6(JP)](texts/u-boot_on_arecx6)
 - [Calculator shell print files](/calculatorshell/)  
 - [What's "chazuke" food offered to guests in Kyoto?](/text/chazuke)
