@@ -53,7 +53,11 @@
 
 これでビルドが通る。デバッグビルドはAndroid Studioから普通に起動できる。そこだけはかなりアド
 
-# 盲腸
+## その他
+
+- https://github.com/Genymobile/gnirehtet ←これで有線接続できる。最初だけscrcpyでダイアログOKが必要。どうせ電源必要だしこれで常用するのがいいのかもしれない
+
+## 盲腸
 
 - https://www.vive.com/jp/support/flow/category_howto/how-to-update-vive-flow-to-support-iphone.html
 - https://blog.dnpp.org/vive_flow_virtual_desktop_hack_using_obs
